@@ -854,6 +854,7 @@ On success NIL will be returned, or :output-underflowed if additional output dat
 (defun stop-stream (pa-stream)
   "Terminates audio processing. It waits until all pending audio buffers have been played before it returns."
   (raise-if-error (%stop-stream pa-stream))) 
+(export 'stop-stream)
 
 (defcstruct stream-info
   (struct-version :int)
